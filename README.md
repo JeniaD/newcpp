@@ -4,6 +4,13 @@ The C++ library for more comfortable programming
 A newcpp is library for more comfortable C++.
 
 <h3>Here are some info:</h3>
+To start, needs to write:
+
+```C++
+#include<newcpp> //Depends on where did it placed and how does it named. \
+                 It can be renamed from "newcpp.cpp" to "newcpp" for this line to be true.
+```
+<hr>
 
 ```C++
 #define REDCONSOLE 4
