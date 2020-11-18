@@ -4,13 +4,13 @@ The C++ library for more comfortable programming
 A newcpp is library for more comfortable C++.
 
 <h3>Here are some info:</h3>
-`
-  #define REDCONSOLE 4
-  
-  #define GREENCONSOLE 2
-  
-  #define YELLOWCONSOLE 14
-`
+
+```
+#define REDCONSOLE 4
+#define GREENCONSOLE 2
+#define YELLOWCONSOLE 14
+```
+
 
 it is a colors for console. It can be used for
 `ChangeColor(color);`
