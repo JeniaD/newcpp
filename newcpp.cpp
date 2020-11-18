@@ -137,7 +137,7 @@
         return oOStrStream.str();
     }
 
-    template < class element, class container >
+    template <class element, class container>
     bool PartOfArray(element elem, container array) {
         for (int i = 0; i < sizeof(array) / sizeof(array[0]); i++)
             if (elem == array[i])
