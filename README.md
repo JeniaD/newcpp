@@ -5,7 +5,7 @@ A newcpp is library for more comfortable C++.
 
 <h3>Here are some info:</h3>
 
-```
+```C++
 #define REDCONSOLE 4
 #define GREENCONSOLE 2
 #define YELLOWCONSOLE 14
@@ -18,7 +18,7 @@ it is a colors for console. It can be used for
 
 Next, maybe, will be useful some of they:
 
-```
+```C++
 //You can call it if you want to change console color to default.
 SetDefaultColor(); 
 
