@@ -1,4 +1,4 @@
-# newcpp
+# C++ newcpp library
 The C++ library for more comfortable programming.
 
 <h3>Here are some info:</h3>
