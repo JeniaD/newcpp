@@ -1,7 +1,5 @@
 # newcpp
-The C++ library for more comfortable programming
-
-A newcpp is library for more comfortable C++.
+The C++ library for more comfortable programming.
 
 <h3>Here are some info:</h3>
 To start, needs to write:
