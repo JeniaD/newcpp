@@ -130,7 +130,7 @@
         transform(s.begin(), s.end(), s.begin(), ::toupper);
     }
 
-    template < typename T >
+    template <typename T>
     string NumberToString(T pNumber) {
         ostringstream oOStrStream;
         oOStrStream << pNumber;
