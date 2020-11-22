@@ -79,6 +79,49 @@ void UpStr(string& s);
 <hr>
 
 ```C++
+template <typename T>
+string NumberToString(T pNumber);
+```
+Returns string made from number.
+
+*Getting number(can be `int`, `float`, `double`, etc.) as parameter, returning converted parameter to string.*
+<hr>
+
+```C++
+template <class element, class container>
+bool PartOfArray(element elem, container array);
+```
+Returns true if element is part of container.
+
+*Getting element(type of container) and container(like `array` or `vector`) as parameter, returning true if element found in container. Otherwise - false.*
+<hr>
+
+```C++
+bool FileExists(const std::string& Filename);
+```
+Returns true if file exists. <b>Not fully tested.</b>
+
+*Getting string as parameter, returning true if file found. Otherwise - false.*
+<hr>
+
+```C++
+void Print(string s, int color);
+void Print(char s, int color);
+```
+Printing char with setted color. For example, 12, 4 - red; 2, 10 - green; 15 - black; 14 - yellow;
+
+*Getting string and int as parameter, returning nothing(printing in the console first parameter).*
+<hr>
+
+```C++
+void Print(string s, int color);
+void Print(char s, int color);
+```
+Printing char with setted color. For example, 12, 4 - red; 2, 10 - green; 15 - black; 14 - yellow;
+
+*Getting string and int as parameter, returning nothing(printing in the console first parameter).*
+
+```C++
 #include<newcpp>
 ```
-C++ `newcpp` library documentation. License in the "LICENSE" file.
+C++ `newcpp` library documentation. License needs to be in the "LICENSE" file.
