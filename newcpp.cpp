@@ -32,6 +32,8 @@
     #define GREENCONSOLE 2
     #define YELLOWCONSOLE 14
 
+    #define PRESSTIMESLEEP 10
+
     #ifdef _WIN32
         #include <io.h>
         #define access _access_s
@@ -194,6 +196,7 @@
     //Simulating user press
     void Press(BYTE key) {
         keybd_event(key, 0, 0, 0);
+        Sleep(PRESSTIMESLEEP);
         keybd_event(key, 0, KEYEVENTF_KEYUP, 0);
     }
 
@@ -201,6 +204,8 @@
     void DoublePress(BYTE key, BYTE key2) {
         keybd_event(key, 0, 0, 0);
         keybd_event(key2, 0, 0, 0);
+        
+        Sleep(PRESSTIMESLEEP);
 
         keybd_event(key, 0, KEYEVENTF_KEYUP, 0);
         keybd_event(key2, 0, KEYEVENTF_KEYUP, 0);
@@ -209,8 +214,8 @@
     //Class for bruteforcing.
     class Chance {
     private:
-        const char zero = 1;
-        const char nine = 0;
+        const char pzc = 1;
+        const char pnc = 0;
 
         string s = "";
 
@@ -218,11 +223,11 @@
             int a = 0;
             while (true) {
                 if (a > s.length()) {
-                    s += zero;
+                    s += pzc;
                     break;
                 }
-                else if (s[a] == nine) {
-                    s[a] = zero;
+                else if (s[a] == pnc) {
+                    s[a] = pzc;
                     a++;
                 }
                 else {
@@ -244,7 +249,7 @@
                 return;
             s.clear();
             for (int i = 0; i < l; i++)
-                s += zero;
+                s += pzc;
         }
     };
 #endif
