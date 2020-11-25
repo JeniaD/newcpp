@@ -165,7 +165,7 @@ for(int i = 0; i < 1000; i++)
 This is a simple use of `Chance` bruteforce tool. After this you can freely use `possibleCombinations`.
 Note: number of possible combinations fixed length can variate on different computers.
 
-*Needs to be initialized first(`Chance name;`, where `name` is the some name, used next). Next, each time called function `Chance.GiveNextGuess();` will be returned next variation of string.*
+*Needs to be initialized first(`Chance name;`). Next, each time called function `Chance.GiveNextGuess();` will be returned next variation of string.*
 
 It can be used another way:
 ```C++
@@ -181,7 +181,8 @@ while(true){
     break;            //Do something appropriate.
 }
 ```
-<hr><hr><hr>
+<hr><br><br>
+
 Those code can work, if will be included `newcpp`. If you need to use this library, you can copy `newcpp` into project, or, the main libraryes are stored. Second case is nice, if you need to use this in different projects.
 ```C++
 #include<newcpp>
