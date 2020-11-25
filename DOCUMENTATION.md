@@ -152,7 +152,7 @@ void DoublePress(BYTE key, BYTE key2);
 ```
 Presses as user on keyboard. Needs to get BYTE as parameter. Working on OS Windows.
 
-*Getting BYTE(or BYTE and BYTE) as parameter, returning nothing(pressing as user).*
+*Getting `BYTE`(or `BYTE` and `BYTE`) as parameter, returning nothing(pressing as user).*
 <hr>
 
 ```C++
