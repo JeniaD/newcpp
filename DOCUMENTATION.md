@@ -181,7 +181,7 @@ while(true){
     break;            //Do something appropriate.
 }
 ```
-<hr><br><br>
+<br><br><br>
 
 Those code can work, if will be included `newcpp`. If you need to use this library, you can copy `newcpp` into project, or, the main libraryes are stored. Second case is nice, if you need to use this in different projects.
 ```C++
