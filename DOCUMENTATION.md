@@ -122,6 +122,38 @@ Writes each symbol in string with some time.
 <hr>
 
 ```C++
+void RealisticPrint(string s, int color, int maxT);
+```
+Writes each symbol in string with some time and color.
+
+*Getting string and 2 int's as parameter, returning nothing(printing in the console using cout first parameter multiplyed on second parameter + some enother system time to enter).*
+<hr>
+
+```C++
+void ChangeColor(int color);
+```
+
+*Getting int as parameter, returning nothing(changing color in console).*
+<hr>
+
+```C++
+void SetDefaultColor();
+```
+Setting default color.
+
+*Getting nothing as parameter, returning nothing(changing color in console to default).*
+<hr>
+
+```C++
+void Press(BYTE key);
+void DoublePress(BYTE key, BYTE key2);
+```
+Presses as user on keyboard. Needs to get BYTE as parameter. Working on OS Windows.
+
+*Getting BYTE(or BYTE and BYTE) as parameter, returning nothing(pressing as user).*
+<hr>
+
+```C++
 Chance bruteforceSystem; //Bruteforce system.
 string possibleCombinations[1000]; //Possible 1000 combinations.
 //Fill possible combinations.
@@ -147,7 +179,8 @@ while(true){
     break;            //Do something appropriate.
 }
 ```
-
+<hr><hr><hr>
+Those code can work, if will be included `newcpp`. If you need to use this library, you can copy `newcpp` into project, or, the main libraryes are stored. Second case is nice, if you need to use this in different projects.
 ```C++
 #include<newcpp>
 ```
