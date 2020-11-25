@@ -114,12 +114,39 @@ Printing char with setted color. For example, 12, 4 - red; 2, 10 - green; 15 - b
 <hr>
 
 ```C++
-void Print(string s, int color);
-void Print(char s, int color);
+void Write(string s, int maxTime);
 ```
-Printing char with setted color. For example, 12, 4 - red; 2, 10 - green; 15 - black; 14 - yellow;
+Writes each symbol in string with some time.
 
-*Getting string and int as parameter, returning nothing(printing in the console first parameter).*
+*Getting string and int as parameter, returning nothing(printing in the console using cout first parameter multiplyed on second parameter + some enother system time to enter).*
+<hr>
+
+```C++
+Chance bruteforceSystem; //Bruteforce system.
+string possibleCombinations[1000]; //Possible 1000 combinations.
+//Fill possible combinations.
+for(int i = 0; i < 1000; i++)
+  possibleCombinations[i] = bruteforceSystem.GiveNextGuess();
+```
+This is a simple use of `Chance` bruteforce tool. After this you can freely use `possibleCombinations`.
+Note: number of possible combinations fixed length can variate on different computers.
+
+*Needs to be initialized first(`Chance name;`, where `name` is the some name, used next). Next, each time called function `Chance.GiveNextGuess();` will be returned next variation of string.*
+
+It can be used another way:
+```C++
+#include <iostream>
+#include <string>
+
+Chance bf;
+string target = "Hello!"; //Target that needs to be guessed.
+bf.SetStartLength(target.length() - 1); //This code can work better if you know sought length. This line can be removed.
+while(true){
+  string result = bf.GiveNextGuess(); //Get next guess.
+  if(result == target) //If guess is correct,
+    break;            //Do something appropriate.
+}
+```
 
 ```C++
 #include<newcpp>
