@@ -5,7 +5,9 @@ A list of functions in `newcpp`:
 ```C++
 bool DirExist(const string& path);
 ```
-*If you need to know if dir exists, you can call this function, giving path as parameter.*
+Returning true if folder found. Otherwise, false.
+
+*Getting string as parameter, returns true if folder(dir) found(in active directory, but path like "C:\\Users\\..." can work too).*
 <hr>
 
 ```C++
