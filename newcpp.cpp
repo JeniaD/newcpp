@@ -11,13 +11,8 @@
     #include <algorithm>
     #include <time.h>
     #include <sstream>
-    //#include <dirent.h>
-    //#include <winable.h>
 
-    //for "DirExist"
     #include <sys/stat.h>
-    //#include <shlwapi.h>
-    //#pragma comment (lib, "shlwapi")
 
     #include <vector>
 
