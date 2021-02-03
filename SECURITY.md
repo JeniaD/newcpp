@@ -4,10 +4,10 @@
 This section is to tell people about which versions of this project are
 currently being supported with security updates.
 
-| Version | Safe & Supported       |
-| ------- | ------------------     |
-| 0.0     | :white_check_mark: :x: |
-| 1.0     | :x: :white_check_mark: |
+| Version | Safe              |Supported         |
+| ------- | -----             |------------      |
+| 0.0     | :white_check_mark:|:x:               |
+| 1.0     | :x:               |:white_check_mark:|
 
 ### 0.0
 The basic `newcpp`.
