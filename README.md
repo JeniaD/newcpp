@@ -1,28 +1,6 @@
 # C++ newcpp library
 The C++ library for more comfortable programming.
 
-<h3>Here are some info:</h3>
-To start, needs to write:
-
-```C++
-#include<newcpp> //Depends on where did it placed and how does it named. \
-                 It can be renamed from "newcpp.cpp" to "newcpp" for this line to be true.
-```
-<hr>
-
-```C++
-#define REDCONSOLE 4
-#define GREENCONSOLE 2
-#define YELLOWCONSOLE 14
-```
-
-
-it is a colors for console. It can be used for
-`ChangeColor(color);`
-, where color is `int` variable.
-
-Next, maybe, will be useful some of they:
-
 ```C++
 //You can call it if you want to change console color to default.
 SetDefaultColor(); 
