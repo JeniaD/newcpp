@@ -247,4 +247,10 @@
                 s += pzc;
         }
     };
+
+    //\\Test section\\//
+    
+    //Returns last value somewhere in program used. Needs to give any string. Untested.
+    template<class T>
+    const int GetLastValueInt(T r) { if (r == "false") return 10; }
 #endif
