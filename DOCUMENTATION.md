@@ -5,7 +5,7 @@ A list of functions in `newcpp`:
 ```C++
 bool DirExist(const string& path);
 ```
-Returning true if folder found. Otherwise, false.
+Returning `true` if folder found. Otherwise, `false`.
 
 *Getting string as parameter, returns true if folder(dir) found(in active directory, but path like "C:\\Users\\..." can work too).*
 <hr>
@@ -15,7 +15,7 @@ wstring StringToWString(const string s);
 ```
 Simple convertor from string to wstring
 
-*Getting string variable as parameter, returning wstring.*
+*Getting `string` variable as parameter, returning `wstring`.*
 <hr>
 
 ```C++
@@ -23,32 +23,32 @@ LPSTR StrToLPSTR(string s);
 ```
 Simple convertor from string to LPSTR
 
-*Getting string as parameter, returning LPSTR.*
+*Getting `string` as parameter, returning `LPSTR`.*
 <hr>
 
 ```C++
 LPCWSTR s2ws(const std::string& s);
 ```
-Simple convertor from string to LPCWSTR
+Simple convertor from `string` to `LPCWSTR`
 
-*Getting string as parameter, returning LPCWSTR.*
+*Getting `string` as parameter, returning `LPCWSTR`.*
 <hr>
 
 ```C++
 bool isCharNumber(char c);
 ```
-Returns true if given char is number.
+Returns `true` if given `char` is number.
 
-*Getting char as parameter, returning bool(true if char is number, false otherwise).*
+*Getting `char` as parameter, returning `bool`(`true` if `char` is number, `false` otherwise).*
 <hr>
 
 ```C++
 string DeleteAllChars(string s, char c);
 string DeleteAllChars(string s, string chars);
 ```
-Deleting all given chars from string and returns it.
+Deleting all given `chars` from string and returns it.
 
-*Getting string and char/string as parameter, returning bool(true if char is number, false otherwise).*
+*Getting `string` and `char`/`string` as parameter, returning `bool`(true if `char` is number, `false` otherwise).*
 <hr>
 
 ```C++
@@ -56,7 +56,7 @@ string ReplaceAll(string str, const string& from, const string& to);
 ```
 Replacing string in text to another string. <b>Not fully tested.</b>
 
-*Getting string and char/string as parameter, returning bool(true if char is number, false otherwise).*
+*Getting `string` and `char/`string` as parameter, returning `bool`(`true` if `char` is number, `false` otherwise).*
 <hr>
 
 ```C++
@@ -73,20 +73,20 @@ void UpStr(string& s);
 ```
 `UpperString` returns string made upper case;
 
-*Getting string as parameter. Returns upper-cased string.*
+*Getting `string` as parameter. Returns upper-cased `string`.*
 
-`UpStr` dont returns string, but making it upper case.
+`UpStr` dont returns `string`, but making it upper case.
 
-*Getting string& as parameter. Returns nothing.*
+*Getting `string&` as parameter. Returns nothing.*
 <hr>
 
 ```C++
 template <typename T>
 string NumberToString(T pNumber);
 ```
-Returns string made from number.
+Returns `string` made from number.
 
-*Getting number(can be `int`, `float`, `double`, etc.) as parameter, returning converted parameter to string.*
+*Getting number(can be `int`, `float`, `double`, etc.) as parameter, returning converted parameter to `string`.*
 <hr>
 
 ```C++
@@ -95,24 +95,24 @@ bool PartOfArray(element elem, container array);
 ```
 Returns true if element is part of container.
 
-*Getting element(type of container) and container(like `array` or `vector`) as parameter, returning true if element found in container. Otherwise - false.*
+*Getting element(type of container) and container(like `array` or `vector`) as parameter, returning true if element found in container. Otherwise - `false`.*
 <hr>
 
 ```C++
 bool FileExists(const std::string& Filename);
 ```
-Returns true if file exists. <b>Not fully tested.</b>
+Returns `true` if file exists. <b>Not fully tested.</b>
 
-*Getting string as parameter, returning true if file found. Otherwise - false.*
+*Getting `string` as parameter, returning `true` if file found. Otherwise - `false`.*
 <hr>
 
 ```C++
 void Print(string s, int color);
 void Print(char s, int color);
 ```
-Printing char with setted color. For example, 12, 4 - red; 2, 10 - green; 15 - black; 14 - yellow;
+Printing `char` with setted color. For example, 12, 4 - red; 2, 10 - green; 15 - black; 14 - yellow;
 
-*Getting string and int as parameter, returning nothing(printing in the console first parameter).*
+*Getting `string` and `int` as parameter, returning nothing(printing in the console first parameter).*
 <hr>
 
 ```C++
@@ -120,13 +120,13 @@ void Write(string s, int maxTime);
 ```
 Writes each symbol in string with some time.
 
-*Getting string and int as parameter, returning nothing(printing in the console using cout first parameter multiplyed on second parameter + some enother system time to enter).*
+*Getting `string` and `int` as parameter, returning nothing(printing in the console using cout first parameter multiplyed on second parameter + some enother system time to enter).*
 <hr>
 
 ```C++
 void RealisticPrint(string s, int color, int maxT);
 ```
-Writes each symbol in string with some time and color.
+Writes each symbol in `string` with some time and color.
 
 *Getting string and 2 int's as parameter, returning nothing(printing in the console using cout first parameter multiplyed on second parameter + some enother system time to enter).*
 <hr>
@@ -135,7 +135,7 @@ Writes each symbol in string with some time and color.
 void ChangeColor(int color);
 ```
 
-*Getting int as parameter, returning nothing(changing color in console).*
+*Getting `int` as parameter, returning nothing(changing color in console).*
 <hr>
 
 ```C++
@@ -150,7 +150,7 @@ Setting default color.
 void Press(BYTE key);
 void DoublePress(BYTE key, BYTE key2);
 ```
-Presses as user on keyboard. Needs to get BYTE as parameter. Working on OS Windows.
+Presses as user on keyboard. Needs to get `BYTE` as parameter. Working on OS Windows.
 
 *Getting `BYTE`(or `BYTE` and `BYTE`) as parameter, returning nothing(pressing as user).*
 <hr>
