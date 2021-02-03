@@ -92,7 +92,7 @@
 
     /*Replacing string in text to another string. Not fully tested.
     Usage:
-    ReplaceAll(string("Hi and hi"), std::string(" "), std::string("_"))
+    ReplaceAll(string("Hi and hi"), string(" "), string("_"))
     Returns:
     "Hi_and_hi"*/
     string ReplaceAll(std::string str, const std::string& from, const std::string& to) {
