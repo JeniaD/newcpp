@@ -7,6 +7,12 @@ currently being supported with security updates.
 | Version | Safe & Supported       |
 | ------- | ------------------     |
 | 0.0     | :white_check_mark: :x: |
+| 1.0     | :x: :white_check_mark: |
+
+### 0.0
+The basic `newcpp`.
+### 1.0
+It is not fully tested because of function `GetLastValueInt`.
 
 ### Vulnerabilities
 
