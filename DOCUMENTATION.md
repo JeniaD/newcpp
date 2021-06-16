@@ -1,6 +1,6 @@
 <h1>Documentation</h1>
 
-**Note: not every function may be here.**
+**Note: information here can be outdated. Not every functions could be here.**
 
 A list of functions in `newcpp`:
 
