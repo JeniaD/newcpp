@@ -1,4 +1,5 @@
 <h1>Documentation</h1>
+Version: 1.0 
 
 **Note: information here can be outdated. Not every functions could be here.**
 
