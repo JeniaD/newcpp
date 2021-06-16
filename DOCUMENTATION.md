@@ -15,7 +15,7 @@ Returning `true` if folder found. Otherwise, `false`.
 ```C++
 wstring StringToWString(const string s);
 ```
-Simple convertor from string to wstring
+Simple convertor from `string` to `wstring`
 
 *Getting `string` variable as parameter, returning `wstring`.*
 <hr>
@@ -23,7 +23,7 @@ Simple convertor from string to wstring
 ```C++
 LPSTR StrToLPSTR(string s);
 ```
-Simple convertor from string to LPSTR
+Simple convertor from `string` to `LPSTR`
 
 *Getting `string` as parameter, returning `LPSTR`.*
 <hr>
@@ -48,7 +48,7 @@ Returns `true` if given `char` is number.
 string DeleteAllChars(string s, char c);
 string DeleteAllChars(string s, string chars);
 ```
-Deleting all given `chars` from string and returns it.
+Deleting all given `char`s from string and returns it.
 
 *Getting `string` and `char`/`string` as parameter, returning `bool`(true if `char` is number, `false` otherwise).*
 <hr>
@@ -58,7 +58,7 @@ string ReplaceAll(string str, const string& from, const string& to);
 ```
 Replacing string in text to another string. <b>Not fully tested.</b>
 
-*Getting `string` and `char/`string` as parameter, returning `bool`(`true` if `char` is number, `false` otherwise).*
+*Getting `string` and `char`/`string` as parameter, returning `bool`(`true` if `char` is number, `false` otherwise).*
 <hr>
 
 ```C++
