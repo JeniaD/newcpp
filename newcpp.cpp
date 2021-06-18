@@ -1,4 +1,5 @@
-#ifndef NEWCPP
+#pragma once
+    #ifndef NEWCPP
     #define NEWCPP
 
     #include <iostream>
@@ -13,8 +14,8 @@
     #include <sstream>
 
     #include <sys/stat.h>
-
     #include <vector>
+    #include <stdexcept> //For exceptions
 
     using namespace std;
 
@@ -23,9 +24,29 @@
     const int fileInitializeStartTime = (int)time(0);
     #define STARTTIME fileInitializeStartTime
 
-    #define REDCONSOLE 4
-    #define GREENCONSOLE 2
-    #define YELLOWCONSOLE 14
+    namespace COLORS {
+        #define CLASSIC (-1) //WORD
+
+        #define INVISIBLEBLACK 0
+
+        #define BLUE 1
+        #define GREEN 2
+        #define LIGHTBLUE 3
+        #define RED 4
+        #define PURPLE 5
+        #define YELLOW 6
+        #define WHITE 7
+        #define GREY 8
+        #define LIGHTBLUE 9
+        #define LIGHTGREEN 10
+        #define CYAN 11
+        #define LIGHTRED 12
+        #define PINK 13
+        #define LIGHTYELLOW 14
+        #define WHITE2 15
+    }
+
+    using namespace COLORS;
 
     #define PRESSTIMESLEEP 10
 
@@ -106,6 +127,7 @@
 
     //Returns a chracter table length.
     int CharacterTableLength() {
+        //return int(char(0) - 1);
         char a = 'a' + 1;
         int counter = 1;
         while (a != 'a') {
@@ -134,9 +156,12 @@
         return oOStrStream.str();
     }
 
+    //Returns true if element is part of array.
     template <class element, class container>
-    bool PartOfArray(element elem, container array) {
-        for (int i = 0; i < sizeof(array) / sizeof(array[0]); i++)
+    bool PartOfArray(element elem, container array, int arraySize=0) {
+        if (!arraySize) arraySize = sizeof(array) / sizeof(array[0]);
+    
+        for (int i = 0; i < arraySize; i++)
             if (elem == array[i])
                 return true;
 
@@ -148,22 +173,26 @@
         return _access(Filename.c_str(), 0) == 0;
     }
 
-    //Printing text with setted color
-    void Print(string s, int color) { //12, 4 - red; 2, 10 - green; 15 - maybe black; 14 - yellow
+    //Changing console text color. For changing it back, ChangeColor(COLORS::CLASSIC) or SetDefaultColor
+    void ChangeColor(int color = CLASSIC) {
         SetConsoleTextAttribute(hConsole, color);
-        cout << s;
-        SetConsoleTextAttribute(hConsole, 15); //2);
     }
 
-    //Printing char with setted color
-    void Print(char s, int color) { //12, 4 - red; 2, 10 - green; 15 - maybe black; 14 - yellow
-        SetConsoleTextAttribute(hConsole, color);
-        cout << s;
-        SetConsoleTextAttribute(hConsole, 15); //2);
+    //Setting standart color
+    void SetDefaultColor() {
+        SetConsoleTextAttribute(hConsole, CLASSIC);
     }
+
+    ////Printing text with setted color
+    //template<class type>
+    //void Print(type s, int color=CLASSIC) {
+    //    SetConsoleTextAttribute(hConsole, color);
+    //    cout << s;
+    //    SetConsoleTextAttribute(hConsole, CLASSIC);
+    //}
 
     //Writes each symbol in string with function Sleep
-    void Write(string s, int maxTime) {
+    void Write(string s, int maxTime=100) {
         srand(time(0));
         for (int i = 0; i < s.length(); i++) {
             cout << s[i];
@@ -172,20 +201,10 @@
     }
 
     //Writes string in setted color with Sleep.
-    void RealisticPrint(string s, int color, int maxT) {
-        SetConsoleTextAttribute(hConsole, color);
-        Write(s, maxT);
-        SetConsoleTextAttribute(hConsole, 15);
-    }
-
-    //Changing console text color. For changing it back, ChangeColor(15) or SetDefaultColor
-    void ChangeColor(int color) {
-        SetConsoleTextAttribute(hConsole, color); //15 - is back
-    }
-
-    //Setting standart color
-    void SetDefaultColor() {
-        SetConsoleTextAttribute(hConsole, 15);
+    void Print(string s, int color=CLASSIC, int maxT=0, int colorAfter=CLASSIC) {
+        ChangeColor(color); //WARNING: Calling SetConsoleTextAttribute insead should speed up.
+        Write(s, maxT); //Slows down output.
+        ChangeColor(colorAfter);
     }
 
     //Simulating user press
@@ -199,7 +218,7 @@
     void DoublePress(BYTE key, BYTE key2) {
         keybd_event(key, 0, 0, 0);
         keybd_event(key2, 0, 0, 0);
-        
+
         Sleep(PRESSTIMESLEEP);
 
         keybd_event(key, 0, KEYEVENTF_KEYUP, 0);
@@ -207,49 +226,67 @@
     }
 
     //Class for bruteforcing.
-    class Chance {
+    class BruteForce {
     private:
         const char pzc = 1;
         const char pnc = 0;
-
-        string s = "";
-
-        void PlusPlus() {
-            int a = 0;
-            while (true) {
-                if (a > s.length()) {
-                    s += pzc;
-                    break;
-                }
-                else if (s[a] == pnc) {
-                    s[a] = pzc;
-                    a++;
-                }
-                else {
-                    s[a]++;
-                    break;
-                }
-            }
-        }
     public:
+        string res = ""; //Bruteforce guess
+
         //Give next string guess
         string GiveNextGuess() {
             PlusPlus();
-            return s;
+            return res;
+        }
+
+        string CurrentGuess() {
+            return res;
         }
 
         //Setting start length of brute-force string. Can be given as normal(parameter 2 but s is maybe ['', ''])
         void SetStartLength(int l) {
-            if (l <= 0)
-                return;
-            s.clear();
+            if (l <= 0) throw std::invalid_argument("Received incorrect value.");//return;
+            res.clear();
             for (int i = 0; i < l; i++)
-                s += pzc;
+                res += pzc;
+        }
+
+        void PlusPlus() {
+            int a = 0;
+            while (true) {
+                if (a > res.length()) {
+                    res += pzc;
+                    break;
+                }
+                else if (res[a] == pnc) {
+                    res[a] = pzc;
+                    a++;
+                }
+                else {
+                    res[a]++;
+                    break;
+                }
+            }
         }
     };
+    namespace sortfunctions {
+        template<class T>
+        vector<T> GnomeSort(vector<T> arr, bool (*compare)(T, T)) {
+            const int s = arr.size();
+            for (int i = 1; i < s; i++) {
+                if (compare(arr[i], arr[i - 1])) {
+                    T helper = arr[i];
+                    arr[i] = arr[i - 1];
+                    arr[i - 1] = helper;
+                    if (i != 1) i -= 2;
+                }
+            }
+            return arr;
+        }
+    }
 
     //\\Test section\\//
-    
+
     //Returns last value somewhere in program used. Needs to give any string. Untested.
     template<class T>
     const int GetLastValueInt(T r) { if (r == "false") return 10; }
