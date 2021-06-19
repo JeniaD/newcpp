@@ -15,10 +15,10 @@ The basic `newcpp`.
 ### 1.0
 It is not fully tested because of function `GetLastValueInt`.
 ### 1.1
-- Removed `Print` function, changed `RealisticPrint` to `Print`
+- Removed `Print` function, changed `RealisticPrint` to `Print`ю
 - Performance slowed bit down in `Print`(was `RealisticPrint`).
 - Added `GnomeSort` function(in `sortfunctions` namespace).
-- Added namespace COLORS
+- Added `namespace COLORS`.
 
 ### Vulnerabilities
 
