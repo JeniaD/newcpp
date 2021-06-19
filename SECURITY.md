@@ -8,11 +8,17 @@ currently being supported with security updates.
 | ------- | -----             |------------      |
 | 0.0     | :white_check_mark:|:x:               |
 | 1.0     | :x:               |:white_check_mark:|
+| 1.1     | :x:               |:white_check_mark:|
 
 ### 0.0
 The basic `newcpp`.
 ### 1.0
 It is not fully tested because of function `GetLastValueInt`.
+### 1.1
+- Removed `Print` function, changed `RealisticPrint` to `Print`
+- Performance slowed bit down in `Print`(was `RealisticPrint`).
+- Added `GnomeSort` function(in `sortfunctions` namespace).
+- Added namespace COLORS
 
 ### Vulnerabilities
 
