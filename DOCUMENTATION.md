@@ -1,7 +1,12 @@
 <h1>Documentation</h1>
-Version: 1.0 
+Version: 1.1
 
-**Note: information here can be outdated. Not every functions could be here.**
+**Note: information here can be outdated. Not every functions could be here. Also functions from other versions may differ.**
+
+```C++
+namespace COLORS {...}
+```
+Here are 
 
 A list of functions in `newcpp`:
 
@@ -110,31 +115,6 @@ Returns `true` if file exists. <b>Not fully tested.</b>
 <hr>
 
 ```C++
-void Print(string s, int color);
-void Print(char s, int color);
-```
-Printing `char` with setted color. For example, 12, 4 - red; 2, 10 - green; 15 - black; 14 - yellow;
-
-*Getting `string` and `int` as parameter, returning nothing(printing in the console first parameter).*
-<hr>
-
-```C++
-void Write(string s, int maxTime);
-```
-Writes each symbol in string with some time.
-
-*Getting `string` and `int` as parameter, returning nothing(printing in the console using cout first parameter multiplyed on second parameter + some enother system time to enter).*
-<hr>
-
-```C++
-void RealisticPrint(string s, int color, int maxT);
-```
-Writes each symbol in `string` with some time and color.
-
-*Getting string and 2 int's as parameter, returning nothing(printing in the console using cout first parameter multiplyed on second parameter + some enother system time to enter).*
-<hr>
-
-```C++
 void ChangeColor(int color);
 ```
 
@@ -147,6 +127,22 @@ void SetDefaultColor();
 Setting default color.
 
 *Getting nothing as parameter, returning nothing(changing color in console to default).*
+<hr>
+
+```C++
+void Write(string s, int maxTime);
+```
+Writes each symbol in string with some time.
+
+*Getting `string` and `int` as parameter, returning nothing(printing in the console using cout first parameter multiplyed on second parameter + some enother system time to enter).*
+<hr>
+
+```C++
+void Print(string s, int color, int maxT, int colorAfter=CLASSIC);
+```
+Writes each symbol in `string` with some time and color.
+
+*Getting string and 2 int's as parameter, returning nothing(printing in the console using cout first parameter multiplyed on second parameter + some enother system time to enter).*
 <hr>
 
 ```C++
@@ -184,6 +180,17 @@ while(true){
     break;            //Do something appropriate.
 }
 ```
+
+# Removed, available in previous versions
+```C++
+void Print(string s, int color);
+void Print(char s, int color);
+```
+Printing `char` with setted color. For example, 12, 4 - red; 2, 10 - green; 15 - black; 14 - yellow;
+
+*Getting `string` and `int` as parameter, returning nothing(printing in the console first parameter).*
+<hr>
+
 # Conclusion
 Those code can work, if will be included `newcpp`. If you need to use this library, you can copy `newcpp` into project, or, the main libraryes are stored. Second case is nice, if you need to use this in different projects.
 ```C++
