@@ -15,7 +15,7 @@
 
     #include <sys/stat.h>
     #include <vector>
-    #include <stdexcept> //For exceptions
+    #include <stdexcept>
 
     using namespace std;
 
@@ -25,7 +25,7 @@
     #define STARTTIME fileInitializeStartTime
 
     namespace COLORS {
-        #define CLASSIC (-1) //WORD
+        #define CLASSIC (-1)
 
         #define INVISIBLEBLACK 0
 
@@ -90,8 +90,6 @@
 
     //Returns true if given char is number
     bool isCharNumber(char c) {
-        //int a = 100;
-        //a = c - '0';
         return isdigit(c);
     }
 
@@ -182,14 +180,6 @@
     void SetDefaultColor() {
         SetConsoleTextAttribute(hConsole, CLASSIC);
     }
-
-    ////Printing text with setted color
-    //template<class type>
-    //void Print(type s, int color=CLASSIC) {
-    //    SetConsoleTextAttribute(hConsole, color);
-    //    cout << s;
-    //    SetConsoleTextAttribute(hConsole, CLASSIC);
-    //}
 
     //Writes each symbol in string with function Sleep
     void Write(string s, int maxTime=100) {
