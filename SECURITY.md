@@ -29,12 +29,11 @@ In case of finding any of a vulnerability, please open new issue(https://github.
 
 ## Bugs
 
-### 21.06.2021
-#### 1.1(maybe also 1.0)
+### 1.1 (maybe also 1.0)
 - `Write` function: can be passed argument `maxTime` as `0`. Function may crush, by dividing by zero. `Print` function also.
 
-<hr>
-:chart: Legend
+<br><hr>
+:chart: Legend:
 - :crossed_swords: - revolution in progress
 - :chart_with_upwards_trend: - gaining popularity
 - :anchor: - ~stable release
