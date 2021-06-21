@@ -31,6 +31,7 @@ In case of finding any of a vulnerability, please open new issue(https://github.
 
 ### 1.1 (maybe also 1.0)
 - `Write` function: can be passed argument `maxTime` as `0`. Function may crush, by dividing by zero. `Print` function also.
+- `const int GetJunk(T r = 10) { if (r == r) return 10; }` - not returning junk.
 
 <br><hr>
 :chart: Legend:
