@@ -15,7 +15,7 @@ currently being supported with security updates.
 The basic `newcpp`. Time creation is approximately: 2020 in May; while `newcpp` was previous named `NeedableFunctions`, which creation time is unknown.
 ### 1.0
 It is not fully tested because of function `GetLastValueInt`.
-### 1.1 ⚔️ ⚓
+### 1.1 ⚔️
 - Removed `Print` function, changed `RealisticPrint` to `Print`.
 - Performance slowed bit down in `Print`(was `RealisticPrint`).
 - Added `GnomeSort` function(in `sortfunctions` namespace).
