@@ -1,5 +1,5 @@
 <h1>Documentation</h1>
-Version: 1.1
+Version: 2.0
 
 **Note: information here can be outdated. Not every functions could be here. Also functions from other versions may differ.**
 
@@ -95,15 +95,10 @@ Returns ~count of characters on computers table length. <b>Not fully tested.</b>
 
 ```C++
 string UpperString(string s);
-void UpStr(string& s);
 ```
-`UpperString` returns string made upper case;
+`UpperString` returns upper case string;
 
 *Getting `string` as parameter. Returns upper-cased `string`.*
-
-`UpStr` dont returns `string`, but making it upper case.
-
-*Getting `string&` as parameter. Returns nothing.*
 <hr>
 
 ```C++
@@ -164,12 +159,21 @@ Writes each symbol in `string` with some time and color.
 <hr>
 
 ```C++
-void Press(BYTE key);
-void DoublePress(BYTE key, BYTE key2);
+void Press(BYTE key, int sleepTime = PRESSTIMESLEEP);
+void DoublePress(BYTE key, BYTE key2, int sleepTime = PRESSTIMESLEEP);
 ```
 Presses as user on keyboard. Needs to get `BYTE` as parameter. Working on OS Windows.
 
-*Getting `BYTE`(or `BYTE` and `BYTE`) as parameter, returning nothing(pressing as user).*
+*Getting `BYTE`(or `BYTE` and `BYTE`) as parameter, returning nothing(pressing as user). `sleepTime` is additional parameter, which indicates what time will be given to `windows.h` library's function `Sleep` in between of press and releasing key.*
+<hr>
+
+```C++
+template<class T>
+T Random(T min = 0, T max = 10000);
+```
+Returns pseudo random number, based on `rand`. Example: `Random<int>(-5, 10)` - it may give number from -5 to 10 including.
+
+*Getting `T`(`int`, `float`, `double`...(but float types may not work properly)) as parameter, returning `T`.*
 <hr>
 
 ```C++
@@ -207,6 +211,14 @@ void Print(char s, int color);
 Printing `char` with setted color. For example, 12, 4 - red; 2, 10 - green; 15 - black; 14 - yellow;
 
 *Getting `string` and `int` as parameter, returning nothing(printing in the console first parameter).*
+<hr>
+
+```C++
+void UpStr(string& s);
+```
+`UpStr` dont returns `string`, but makes it upper case.
+
+*Getting `string&`(adress) as parameter, and changing it. Returns nothing.*
 <hr>
 
 # Conclusion
