@@ -80,7 +80,7 @@ Deleting all given `char`s from string and returns it.
 ```C++
 string ReplaceAll(string str, const string& from, const string& to);
 ```
-Replacing string in text to another string. <b>Not fully tested.</b>
+Replacing string in text to another string.
 
 *Getting `string` and `char`/`string` as parameter, returning `bool`(`true` if `char` is number, `false` otherwise).*
 <hr>
