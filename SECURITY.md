@@ -4,12 +4,12 @@
 This section is to tell people about which versions of this project are
 currently being supported with security updates.
 
-| Version | Safe              |Supported         |Release date|
-| ------- | -----             |------------      |------------|
-| 0.0     | :white_check_mark:|:x:               |Undefined   |
-| 1.0     | :x:               |:white_check_mark:|Undefined   |
-| 1.1     | :white_check_mark:|:white_check_mark:|Undefined   |
-|2.0      | ?                 | ?                |Unknown     |
+| Version | Codename           | Safe             | Supported         | Release date |
+| ------- | --------           | -----            | ------------      | ------------ |
+| 0.0     | NEEDABLE START     |:white_check_mark:| :x:               | Undefined    |
+| 1.0     |                    |:x:               | :x:               | Undefined    |
+| 1.1     |                    |:x:               | :x:               | Undefined    |
+| 2.0     | REDLINE            |:white_check_mark:| :white_check_mark:| 21.6.2021    |
 
 ### 0.0 :anchor:
 The basic `newcpp`. Time creation is approximately: 2020 in May; while `newcpp` was previous named `NeedableFunctions`, which creation time is unknown.
@@ -20,6 +20,12 @@ It is not fully tested because of function `GetLastValueInt`.
 - Performance slowed bit down in `Print`(was `RealisticPrint`).
 - Added `GnomeSort` function(in `sortfunctions` namespace).
 - Added `namespace COLORS`.
+### 2.0 ⚓
+- Removed `UpStr` function.
+- Added time as parameter in `Press` and `DoublePress` functions.
+- Fixed `GetJunk` function.
+- Fixed `Write` function(division by zero error).
+- Added `Random` function.
 
 ## Vulnerabilities
 
