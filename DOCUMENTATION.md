@@ -6,7 +6,25 @@ Version: 1.1
 ```C++
 namespace COLORS {...}
 ```
-Here are 
+Here are the colors namespace. You can use it for `ChangeColor` function, for example.
+Here are the list of colors:
+
+- `CLASSIC`
+- `INVISIBLEBLACK`
+- `BLUE`
+- `GREEN`
+- `LIGHTBLUE`
+- `RED`
+- `PURPLE`
+- `YELLOW`
+- `WHITE`
+- `GREY`
+- `LIGHTBLUE`
+- `LIGHTGREEN`
+- `CYAN`
+- `LIGHTRED`
+- `PINK`
+- `LIGHTYELLOW`
 
 A list of functions in `newcpp`:
 
@@ -155,7 +173,7 @@ Presses as user on keyboard. Needs to get `BYTE` as parameter. Working on OS Win
 <hr>
 
 ```C++
-Chance bruteforceSystem; //Bruteforce system.
+BruteForce bruteforceSystem; //Bruteforce system.
 string possibleCombinations[1000]; //Possible 1000 combinations.
 //Fill possible combinations.
 for(int i = 0; i < 1000; i++)
