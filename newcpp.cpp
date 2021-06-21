@@ -109,11 +109,11 @@
         return s;
     }
 
-    /*Replacing string in text to another string. Not fully tested.
+    /*Replacing string in text to another string.
     Usage:
-    ReplaceAll(string("Hi and hi"), string(" "), string("_"))
+    ReplaceAll(string("The main string"), string(" "), string("-"))
     Returns:
-    "Hi_and_hi"*/
+    "The-main-string"*/
     string ReplaceAll(std::string str, const std::string& from, const std::string& to) {
         size_t start_pos = 0;
         while ((start_pos = str.find(from, start_pos)) != std::string::npos) {
