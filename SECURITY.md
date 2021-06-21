@@ -22,10 +22,10 @@ It is not fully tested because of function `GetLastValueInt`.
 - Added `namespace COLORS`.
 ### 2.0 ⚓
 - Removed `UpStr` function.
-- Added time as parameter in `Press` and `DoublePress` functions.
 - Fixed `GetJunk` function.
 - Fixed `Write` function(division by zero error).
 - Added `Random` function.
+- Added time as parameter in `Press` and `DoublePress` functions.
 
 ## Vulnerabilities
 
