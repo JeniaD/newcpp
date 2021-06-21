@@ -9,6 +9,7 @@ currently being supported with security updates.
 | 0.0     | :white_check_mark:|:x:               |Undefined   |
 | 1.0     | :x:               |:white_check_mark:|Undefined   |
 | 1.1     | :white_check_mark:|:white_check_mark:|Undefined   |
+|2.0      | ?                 | ?                |Unknown     |
 
 ### 0.0 :anchor:
 The basic `newcpp`. Time creation is approximately: 2020 in May; while `newcpp` was previous named `NeedableFunctions`, which creation time is unknown.
