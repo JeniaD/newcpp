@@ -11,7 +11,7 @@ currently being supported with security updates.
 | 1.1     | :x:               |:white_check_mark:|
 
 ### 0.0
-The basic `newcpp`.
+The basic `newcpp`. Time creation is approximately: 2020 in May; while `newcpp` was previous named `NeedableFunctions`, which creation time is unknown.
 ### 1.0
 It is not fully tested because of function `GetLastValueInt`.
 ### 1.1
