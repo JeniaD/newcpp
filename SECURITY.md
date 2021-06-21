@@ -1,5 +1,5 @@
 # Security Policy
-### Checked Versions
+## Checked Versions
 
 This section is to tell people about which versions of this project are
 currently being supported with security updates.
@@ -21,13 +21,19 @@ It is not fully tested because of function `GetLastValueInt`.
 - Added `GnomeSort` function(in `sortfunctions` namespace).
 - Added `namespace COLORS`.
 
-### Vulnerabilities
+## Vulnerabilities
 
 This section to tell people how to report a vulnerability.
 
 In case of finding any of a vulnerability, please open new issue(https://github.com/JeniaD/newcpp/issues).
 
-<br><br>
+## Bugs
+
+### 21.06.2021
+#### 1.1(maybe also 1.0)
+- `Write` function: can be passed argument `maxTime` as `0`. Function may crush, by dividing by zero. `Print` function also.
+
+<hr>
 :chart: Legend
 - :crossed_swords: - revolution in progress
 - :chart_with_upwards_trend: - gaining popularity
