@@ -222,8 +222,8 @@ void UpStr(string& s);
 <hr>
 
 # Conclusion
-Those code can work, if will be included `newcpp`. If you need to use this library, you can copy `newcpp` into project, or, the main libraryes are stored. Second case is nice, if you need to use this in different projects.
+To use this library, you could include it to your code. First, to do this, you need to download it either to your project, or where all your libraryes are stored.
 ```C++
 #include<newcpp>
 ```
-C++ `newcpp` library documentation. License needs to be in the "LICENSE" file.
+C++ `newcpp` library documentation. License should be in the "LICENSE" file.
