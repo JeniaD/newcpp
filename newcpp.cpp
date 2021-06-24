@@ -169,7 +169,7 @@
         return _access(Filename.c_str(), 0) == 0;
     }
 
-    //Changing console text color. For changing it back, ChangeColor(COLORS::CLASSIC) or SetDefaultColor
+    //Changing console text color. For changing it back, ChangeColor(COLORS::CLASSIC) or SetDefaultColor()
     void ChangeColor(int color = CLASSIC) {
         SetConsoleTextAttribute(hConsole, color);
     }
